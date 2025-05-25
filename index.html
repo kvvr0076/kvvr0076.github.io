@@ -166,14 +166,14 @@
 		    if (charIndex < typingTexts[textIndex].length) {
 		      typingAnimationElement.textContent += typingTexts[textIndex].charAt(charIndex);
 		      charIndex++;
-		      setTimeout(typeText, 200); // typing speed
+		      setTimeout(typeText, 50); // typing speed
 		    } else {
 		      setTimeout(() => {
 		        typingAnimationElement.textContent = '';
 		        charIndex = 0;
 		        textIndex = (textIndex + 1) % typingTexts.length;
 		        typeText();
-		      }, 2000); // pause before next word
+		      }, 3000); // pause before next word
 		    }
 		  }
 		
