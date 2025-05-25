@@ -135,7 +135,8 @@
 	      </div>
 	    </div>
 	  </nav>
-	  <section id="home-section" class="hero">
+
+<section id="home-section" class="hero">
   <div class="hero-wrap">
     <div class="overlay"></div>
     <div class="container">
@@ -145,39 +146,27 @@
           <h1 class="mb-4 mt-3">I'm <span style="color: #ffbd39;">Vishnuvardhan Reddy Komatireddy</span></h1>
 
           <!-- Typing animation -->
-          <span id="typing-animation" style="display: block; font-size: 20px; font-weight: 600; margin-top: 10px;"></span>
-
-          <script>
-            const typingAnimationElement = document.getElementById('typing-animation');
-            const typingTexts = [
-              'a Full Stack .NET Developer',
-              'a Software Developer',
-              'a Frontend Developer',
-              'a SQL & EF Core Enthusiast',
-              'a CS Graduate'
-            ];
-
-            let textIndex = 0;
-            let charIndex = 0;
-
-            function typeText() {
-              if (charIndex < typingTexts[textIndex].length) {
-                typingAnimationElement.textContent += typingTexts[textIndex].charAt(charIndex);
-                charIndex++;
-                setTimeout(typeText, 100);
-              } else {
-                setTimeout(() => {
-                  typingAnimationElement.textContent = '';
-                  charIndex = 0;
-                  textIndex = (textIndex + 1) % typingTexts.length;
-                  typeText();
-                }, 2000);
-              }
-            }
-
-            typeText();
-          </script>
-
+          <span id="typing-animation" class="typing-text"></span>
+		<script>
+		  const typingTexts = [
+		    'a Full Stack .NET Developer',
+		    'a Software Developer',
+		    'a Frontend Developer',
+		    'a SQL & EF Core Enthusiast',
+		    'a CS Graduate'
+		  ];
+		
+		  let textIndex = 0;
+		
+		  function updateTypingText() {
+		    const element = document.getElementById('typing-animation');
+		    element.textContent = typingTexts[textIndex];
+		    textIndex = (textIndex + 1) % typingTexts.length;
+		  }
+		
+		  updateTypingText(); // initial load
+		  setInterval(updateTypingText, 2000); // change every 2 seconds
+		</script>
           <h2 class="mt-3">.NET Developer | Skilled in Angular, React & SQL</h2>
 
           <p class="mt-4">
@@ -189,9 +178,6 @@
     </div>
   </div>
 </section>
-
-
-
 
 
     <section class="ftco-about img ftco-section ftco-no-pb" id="about-section">
