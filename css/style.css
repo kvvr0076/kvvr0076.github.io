@@ -86,15 +86,17 @@ abbr[data-original-title] {
   text-decoration-skip-ink: none; }
 /*  */
 
-.hero-content-static {
+.hero-wrap {
   background: url('images/bg_1.png') no-repeat center center;
   background-size: cover;
   position: relative;
   min-height: 100vh;
   padding: 100px 0;
+  display: flex;
+  align-items: center;
 }
 
-.hero-content-static .overlay {
+.hero-wrap .overlay {
   position: absolute;
   top: 0;
   left: 0;
@@ -103,6 +105,16 @@ abbr[data-original-title] {
   background: rgba(0, 0, 0, 0.5);
 }
 
+.typing-text {
+  font-size: 22px;
+  font-weight: 600;
+  color: white;
+  text-align: center;
+  white-space: nowrap;
+  overflow: hidden;
+  max-width: 100%;
+  margin: 0 auto;
+}
 
 /* @media (max-width: 768px) {
   .hero h1 {
