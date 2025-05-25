@@ -149,8 +149,6 @@
 		<h3 id="typing-animation" class="typing-text mt-3"></h3>
 
 	         <script>
-		  const typingAnimationElement = document.getElementById('typing-animation');
-		
 		  const typingTexts = [
 		    'a Full Stack .NET Developer',
 		    'a Software Developer',
@@ -159,27 +157,29 @@
 		    'a CS Graduate'
 		  ];
 		
+		  const typingElement = document.getElementById('typing-animation');
 		  let textIndex = 0;
 		  let charIndex = 0;
 		
 		  function typeText() {
 		    if (charIndex < typingTexts[textIndex].length) {
-		      typingAnimationElement.textContent += typingTexts[textIndex].charAt(charIndex);
+		      typingElement.textContent += typingTexts[textIndex].charAt(charIndex);
 		      charIndex++;
 		      setTimeout(typeText, 100); // typing speed
 		    } else {
+		      // Wait 2s, then clear and start next word
 		      setTimeout(() => {
-		        typingAnimationElement.textContent = '';
+		        typingElement.textContent = '';
 		        charIndex = 0;
 		        textIndex = (textIndex + 1) % typingTexts.length;
-		        typeText();
-		      }, 3000); // pause before next word
+		        typeText(); // ✅ only one call here
+		      }, 2000);
 		    }
 		  }
 		
-		  // Start the typing animation
-		  typeText();
+		  typeText(); // Start once
 		</script>
+
 
 	
 	          <h2 class="mt-3">.NET Developer | Skilled in Angular, React & SQL</h2>
