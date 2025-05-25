@@ -166,7 +166,7 @@
 		    if (charIndex < typingTexts[textIndex].length) {
 		      typingAnimationElement.textContent += typingTexts[textIndex].charAt(charIndex);
 		      charIndex++;
-		      setTimeout(typeText, 50); // typing speed
+		      setTimeout(typeText, 100); // typing speed
 		    } else {
 		      setTimeout(() => {
 		        typingAnimationElement.textContent = '';
