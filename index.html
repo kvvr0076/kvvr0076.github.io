@@ -160,27 +160,33 @@
 		  const typingElement = document.getElementById('typing-animation');
 		  let textIndex = 0;
 		  let charIndex = 0;
+		  let isDeleting = false;
 		
-		  function typeText() {
-		    if (charIndex < typingTexts[textIndex].length) {
-		      typingElement.textContent += typingTexts[textIndex].charAt(charIndex);
-		      charIndex++;
-		      setTimeout(typeText, 100); // typing speed
-		    } else {
-		      // Wait 2s, then clear and start next word
+		  function typeEffect() {
+		    const currentText = typingTexts[textIndex];
+		    const visibleText = isDeleting
+		      ? currentText.substring(0, charIndex--)
+		      : currentText.substring(0, charIndex++);
+		
+		    typingElement.textContent = visibleText;
+		
+		    if (!isDeleting && charIndex === currentText.length + 1) {
+		      // pause before deleting
 		      setTimeout(() => {
-		        typingElement.textContent = '';
-		        charIndex = 0;
-		        textIndex = (textIndex + 1) % typingTexts.length;
-		        typeText(); // ✅ only one call here
+		        isDeleting = true;
+		        typeEffect();
 		      }, 2000);
+		    } else if (isDeleting && charIndex === 0) {
+		      isDeleting = false;
+		      textIndex = (textIndex + 1) % typingTexts.length;
+		      typeEffect();
+		    } else {
+		      setTimeout(typeEffect, isDeleting ? 50 : 100);
 		    }
 		  }
 		
-		  typeText(); // Start once
+		  typeEffect();
 		</script>
-
-
 	
 	          <h2 class="mt-3">.NET Developer | Skilled in Angular, React & SQL</h2>
 	
