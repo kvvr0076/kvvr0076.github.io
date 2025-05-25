@@ -84,6 +84,32 @@ abbr[data-original-title] {
   cursor: help;
   border-bottom: 0;
   text-decoration-skip-ink: none; }
+/*  */
+
+@media (max-width: 768px) {
+  .hero h1 {
+    font-size: 28px;
+  }
+
+  .hero h2 {
+    font-size: 18px;
+  }
+
+  #typing-animation {
+    font-size: 18px;
+  }
+
+  .hero .btn {
+    padding: 10px 20px;
+    font-size: 14px;
+  }
+
+  .one-forth {
+    padding: 20px !important;
+  }
+}
+
+/*  */
 
 address {
   margin-bottom: 1rem;
