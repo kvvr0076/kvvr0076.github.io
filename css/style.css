@@ -8650,20 +8650,25 @@ h1, h2, h3, h4, h5,
           background: #fff; }
 
 .hero-wrap {
-  width: 100%;
-  height: 100%;
-  position: inherit;
+  background: url('images/bg_1.png') no-repeat center center;
   background-size: cover;
-  background-repeat: no-repeat; }
+  position: relative;
+  min-height: 100vh;
+  padding: 100px 0;
+  display: flex;
+  align-items: center;
+}
+
   .hero-wrap .overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    content: '';
-    opacity: 0;
-    background: #000000; }
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5); /* semi-transparent black */
+  content: '';
+  opacity: 1;
+}
 
 .slider-text h1 {
   font-size: 48px;
@@ -9709,3 +9714,39 @@ textarea.form-control {
   100% {
     stroke-dasharray: 89, 200;
     stroke-dashoffset: -136px; } }
+
+
+/*  */
+/*  */
+
+@media (max-width: 768px) {
+  .hero-wrap h1 {
+    font-size: 26px;
+    line-height: 1.2;
+  }
+
+  .hero-wrap h2 {
+    font-size: 16px;
+  }
+
+  #typing-animation {
+    font-size: 16px;
+  }
+
+  .hero-wrap .btn {
+    padding: 10px 18px;
+    font-size: 14px;
+    margin: 5px;
+  }
+
+  .subheading {
+    font-size: 14px;
+  }
+
+  .one-third.img {
+    height: 200px;
+    background-size: cover;
+  }
+}
+/*  */
+/*  */
