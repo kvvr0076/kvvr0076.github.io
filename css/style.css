@@ -84,82 +84,9 @@ abbr[data-original-title] {
   cursor: help;
   border-bottom: 0;
   text-decoration-skip-ink: none; }
+
+
 /*  */
-
-.typing-text::after {
-  content: '|';
-  animation: blink 1s infinite;
-}
-
-@keyframes blink {
-  0%, 100% { opacity: 1; }
-  50% { opacity: 0; }
-}
-
-.hero-wrap {
-  background: url('images/bg_1.png') no-repeat center center;
-  background-size: cover;
-  position: relative;
-  min-height: 100vh;
-  padding: 100px 0;
-  display: flex;
-  align-items: center;
-}
-
-.hero-wrap .overlay {
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background: rgba(0, 0, 0, 0.5);
-}
-
-.typing-text {
-  font-size: 22px;
-  font-weight: 600;
-  color: white;
-  text-align: center;
-  white-space: nowrap;
-  overflow: hidden;
-  max-width: 100%;
-  margin: 0 auto;
-}
-
-/* @media (max-width: 768px) {
-  .hero h1 {
-    font-size: 28px;
-  }
-
-  .hero h2 {
-    font-size: 18px;
-  }
-
-  #typing-animation {
-    font-size: 18px;
-  }
-
-  .hero .btn {
-    padding: 10px 20px;
-    font-size: 14px;
-  }
-
-  .one-forth {
-    padding: 20px !important;
-  }
-}
-
-.typing-text {
-  font-size: 22px;
-  font-weight: 600;
-  color: white;
-  text-align: center;
-  white-space: nowrap;
-  overflow: hidden;
-  width: 100%;
-  max-width: 100%;
-  margin: 0 auto;
-} */
 
 
 /*  */
