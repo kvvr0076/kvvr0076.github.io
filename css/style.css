@@ -8650,15 +8650,17 @@ h1, h2, h3, h4, h5,
           background: #fff; }
 
 .hero-wrap {
-  padding-top: 120px; /* Push below navbar */
-  padding-bottom: 100px;
+  padding-top: 120px; /* Make room for navbar */
+  padding-bottom: 80px;
   background: url('images/bg_1.png') no-repeat center center;
   background-size: cover;
   position: relative;
   min-height: 100vh;
   display: flex;
   align-items: center;
+  z-index: 1;
 }
+
 
   .hero-wrap .overlay {
   position: absolute;
