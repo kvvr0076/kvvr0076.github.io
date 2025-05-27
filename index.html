@@ -138,55 +138,52 @@
 
 
 	  
-<section id="home-section" class="hero-wrap">
-  <div class="overlay"></div>
-  <div class="container h-100 d-flex align-items-center justify-content-center text-center">
-    <div class="w-100">
-      <span class="subheading" style="color: #ffbd39;">Hello!</span>
-      <h1 class="mb-4 mt-3">I'm <span style="color: #ffbd39;">Vishnuvardhan Reddy Komatireddy</span></h1>
+<section id="home-section" style="background: #000; min-height: 100vh; display: flex; align-items: center; justify-content: center; text-align: center; padding: 60px 20px;">
+  <div class="container" style="max-width: 900px;">
+    <span class="subheading" style="color: #ffbd39; font-size: 18px;">Hello!</span>
+    <h1 class="mb-4 mt-3" style="color: white;">I'm <span style="color: #ffbd39;">Vishnuvardhan Reddy Komatireddy</span></h1>
 
-      <!-- Typing animation -->
-      <span id="typing-animation" style="display: block; font-size: 24px; font-weight: 600; color: #fff;"></span>
+    <!-- Typing animation -->
+    <span id="typing-animation" style="display: block; font-size: 24px; font-weight: 600; color: #fff;"></span>
 
-      <script>
-        const typingElement = document.getElementById('typing-animation');
-        const texts = [
-          'a Full Stack .NET Developer',
-          'a Software Developer',
-          'a Frontend Developer',
-          'a SQL & EF Core Enthusiast',
-          'a CS Graduate'
-        ];
-        let i = 0, j = 0, currentText = '', isDeleting = false;
+    <script>
+      const typingElement = document.getElementById('typing-animation');
+      const texts = [
+        'a Full Stack .NET Developer',
+        'a Software Developer',
+        'a Frontend Developer',
+        'a SQL & EF Core Enthusiast',
+        'a CS Graduate'
+      ];
+      let i = 0, j = 0, currentText = '', isDeleting = false;
 
-        function type() {
-          currentText = texts[i];
-          if (!isDeleting) {
-            typingElement.textContent = currentText.substring(0, j++);
-            if (j > currentText.length) {
-              isDeleting = true;
-              setTimeout(type, 1000);
-              return;
-            }
-          } else {
-            typingElement.textContent = currentText.substring(0, j--);
-            if (j < 0) {
-              isDeleting = false;
-              i = (i + 1) % texts.length;
-            }
+      function type() {
+        currentText = texts[i];
+        if (!isDeleting) {
+          typingElement.textContent = currentText.substring(0, j++);
+          if (j > currentText.length) {
+            isDeleting = true;
+            setTimeout(type, 1000);
+            return;
           }
-          setTimeout(type, 100);
+        } else {
+          typingElement.textContent = currentText.substring(0, j--);
+          if (j < 0) {
+            isDeleting = false;
+            i = (i + 1) % texts.length;
+          }
         }
-        type();
-      </script>
+        setTimeout(type, 100);
+      }
+      type();
+    </script>
 
-      <h2 style="color: #fff;" class="mt-4">.NET Developer | Skilled in Angular, React & SQL</h2>
+    <h2 class="mt-4" style="color: #fff;">.NET Developer | Skilled in Angular, React & SQL</h2>
 
-      <p class="mt-4">
-        <a href="https://www.linkedin.com/in/vishnuvardhan-reddy-komatireddy-83689331b/" class="btn btn-primary py-3 px-4" target="_blank" rel="noopener noreferrer">LinkedIn</a>
-        <a href="https://github.com/kvvr0076" class="btn btn-white btn-outline-white py-3 px-4" target="_blank" rel="noopener noreferrer">My Works</a>
-      </p>
-    </div>
+    <p class="mt-4">
+      <a href="https://www.linkedin.com/in/vishnuvardhan-reddy-komatireddy-83689331b/" class="btn btn-primary py-3 px-4" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+      <a href="https://github.com/kvvr0076" class="btn btn-outline-white btn-white py-3 px-4" target="_blank" rel="noopener noreferrer">My Works</a>
+    </p>
   </div>
 </section>
 
