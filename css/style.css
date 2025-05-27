@@ -8650,7 +8650,7 @@ h1, h2, h3, h4, h5,
           background: #fff; }
 
 .hero-wrap {
-  padding-top: 120px; /* Make room for navbar */
+  padding-top: 120px;
   padding-bottom: 80px;
   background: url('images/bg_1.png') no-repeat center center;
   background-size: cover;
