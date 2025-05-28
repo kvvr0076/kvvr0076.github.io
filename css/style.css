@@ -9715,10 +9715,12 @@ textarea.form-control {
 
 /* fixed-width typing area so the text “grows” from the left,
    but the whole block stays perfectly centered */
-.typing-text {
+/* base (desktop) */
+#typing-animation {
   display: inline-block;
-  width: 30ch;           /* wide enough for your longest line */
-  text-align: center;    /* keep every frame perfectly centered */
+  width: 30ch;          /* enough for your longest line */
+  max-width: 100%;      /* never exceed its parent */
+  text-align: center;   /* keeps the text centered inside the box */
   font-size: 24px;
   font-weight: 600;
   color: #fff;
@@ -9726,13 +9728,14 @@ textarea.form-control {
   overflow: hidden;
 }
 
-/* responsive shrink for mobile */
+/* mobile */
 @media (max-width: 768px) {
-  .typing-text {
-    width: 20ch;
+  #typing-animation {
+    width: 27ch;        /* exactly your longest string length */
     font-size: 18px;
   }
 }
+
 
 /*  */
 /*  */
