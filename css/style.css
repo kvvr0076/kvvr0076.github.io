@@ -9749,6 +9749,19 @@ textarea.form-control {
   border-right: 2px solid #ffbd39; /* Optional: blinking cursor effect */
 }
 
+.typing-text {
+  display: block;
+  width: 100%;
+  max-width: 100%;
+  text-align: center;
+  font-size: 24px;
+  font-weight: 600;
+  color: #fff;
+  white-space: nowrap;
+  overflow: hidden;
+  margin: 0 auto;
+}
+
 
 /*  */
 /*  */
