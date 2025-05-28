@@ -142,51 +142,55 @@
   <div class="container h-100 d-flex align-items-center justify-content-center text-center">
     <div class="w-100">
       <span class="subheading" style="color: #ffbd39;">Hello!</span>
-      <h1 class="mb-4 mt-3">I'm <span style="color: #ffbd39;">Vishnuvardhan Reddy Komatireddy</span></h1>
+      <h1 class="mb-4 mt-3">
+        I’m <span style="color: #ffbd39;">Vishnuvardhan Reddy Komatireddy</span>
+      </h1>
 
-	<!-- Typing Animation -->
-	<span id="typing-animation"></span>
-	
-	<script>
-	const typingElement = document.getElementById('typing-animation');
-	const texts = [
-	'a Full Stack .NET Developer',
-	'a Software Developer',
-	'a Frontend Developer',
-	'a SQL & EF Core Enthusiast',
-	'a CS Graduate'
-	];
-	
-	let textIndex = 0;
-	let charIndex = 0;
-	
-	function typeNextCharacter() {
-	if (charIndex < texts[textIndex].length) {
-	typingElement.textContent += texts[textIndex].charAt(charIndex);
-	charIndex++;
-	setTimeout(typeNextCharacter, 200);
-	} else {
-	setTimeout(() => {
-	typingElement.textContent = '';
-	charIndex = 0;
-	textIndex = (textIndex + 1) % texts.length;
-	typeNextCharacter();
-	}, 2000); // 2-second pause
-	}
-	}
-	
-	typeNextCharacter();
-	</script>
+      <!-- Typing Animation -->
+      <span id="typing-animation"></span>
 
-      <h2 style="color: #fff;" class="mt-4">.NET Developer | Skilled in Angular, React & SQL</h2>
+      <script>
+        const typingElement = document.getElementById('typing-animation');
+        const texts = [
+          'a Full Stack .NET Developer',
+          'a Software Developer',
+          'a Frontend Developer',
+          'a SQL & EF Core Enthusiast',
+          'a CS Graduate'
+        ];
+
+        let textIndex = 0;
+        let charIndex = 0;
+
+        function typeNextCharacter() {
+          if (charIndex < texts[textIndex].length) {
+            typingElement.textContent += texts[textIndex][charIndex++];
+            setTimeout(typeNextCharacter, 100); // adjust speed here
+          } else {
+            setTimeout(() => {
+              typingElement.textContent = '';
+              charIndex = 0;
+              textIndex = (textIndex + 1) % texts.length;
+              typeNextCharacter();
+            }, 2000); // pause before next word
+          }
+        }
+
+        typeNextCharacter();
+      </script>
+
+      <h2 style="color: #fff;" class="mt-4">
+        .NET Developer | Skilled in Angular, React & SQL
+      </h2>
 
       <p class="mt-4">
-        <a href="https://www.linkedin.com/in/vishnuvardhan-reddy-komatireddy-83689331b/" class="btn btn-primary py-3 px-4" target="_blank" rel="noopener noreferrer">LinkedIn</a>
-        <a href="https://github.com/kvvr0076" class="btn btn-white btn-outline-white py-3 px-4" target="_blank" rel="noopener noreferrer">My Works</a>
+        <a href="https://www.linkedin.com/in/…" class="btn btn-primary py-3 px-4">LinkedIn</a>
+        <a href="https://github.com/…" class="btn btn-white btn-outline-white py-3 px-4">My Works</a>
       </p>
     </div>
   </div>
 </section>
+
 
 
 	  
