@@ -164,7 +164,7 @@
 	if (charIndex < texts[textIndex].length) {
 	typingElement.textContent += texts[textIndex].charAt(charIndex);
 	charIndex++;
-	setTimeout(typeNextCharacter, 100);
+	setTimeout(typeNextCharacter, 200);
 	} else {
 	setTimeout(() => {
 	typingElement.textContent = '';
