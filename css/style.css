@@ -9747,7 +9747,7 @@ textarea.form-control {
   white-space: nowrap;
   overflow: hidden;
   border-right: 2px solid #ffbd39;
-  animation: blinkCursor 0.7s steps(1) infinite;
+/*   animation: blinkCursor 0.7s steps(1) infinite; */
 }
 
 
