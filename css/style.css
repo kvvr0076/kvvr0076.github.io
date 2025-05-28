@@ -9739,6 +9739,16 @@ textarea.form-control {
   }
 }
 
+#typing-animation {
+  display: inline-block;
+  font-size: 24px;
+  font-weight: 600;
+  color: #fff;
+  white-space: nowrap;
+  overflow: hidden;
+  border-right: 2px solid #ffbd39; /* Optional: blinking cursor effect */
+}
+
 
 /*  */
 /*  */
