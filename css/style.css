@@ -9750,14 +9750,6 @@ textarea.form-control {
   animation: blinkCursor 0.7s steps(1) infinite;
 }
 
-@keyframes blinkCursor {
-  0%, 100% {
-    border-color: #ffbd39;
-  }
-  50% {
-    border-color: transparent;
-  }
-}
 
 
 /*  */
