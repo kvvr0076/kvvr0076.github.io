@@ -9746,20 +9746,17 @@ textarea.form-control {
   color: #fff;
   white-space: nowrap;
   overflow: hidden;
-  border-right: 2px solid #ffbd39; /* Optional: blinking cursor effect */
+  border-right: 2px solid #ffbd39;
+  animation: blinkCursor 0.7s steps(1) infinite;
 }
 
-.typing-text {
-  display: block;
-  width: 100%;
-  max-width: 100%;
-  text-align: center;
-  font-size: 24px;
-  font-weight: 600;
-  color: #fff;
-  white-space: nowrap;
-  overflow: hidden;
-  margin: 0 auto;
+@keyframes blinkCursor {
+  0%, 100% {
+    border-color: #ffbd39;
+  }
+  50% {
+    border-color: transparent;
+  }
 }
 
 
