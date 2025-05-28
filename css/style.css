@@ -9746,7 +9746,7 @@ textarea.form-control {
   color: #fff;
   white-space: nowrap;
   overflow: hidden;
-  /* NO CURSOR */
+  /* NO cursor, no keyframes */
 }
 
 
