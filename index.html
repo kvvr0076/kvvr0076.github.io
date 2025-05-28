@@ -119,23 +119,23 @@
 	  ];
 	  let textIndex = 0, charIndex = 0;
 	
-	  function typeNextCharacter() {
+	  function typeNext() {
 	    if (charIndex < texts[textIndex].length) {
 	      typingElement.textContent += texts[textIndex].charAt(charIndex++);
-	      setTimeout(typeNextCharacter, 150);
+	      setTimeout(typeNext, 100);      // 100 ms per character
 	    } else {
-	      // pause 0.5s on full phrase, then clear & next
 	      setTimeout(() => {
 	        typingElement.textContent = '';
 	        charIndex = 0;
 	        textIndex = (textIndex + 1) % texts.length;
-	        typeNextCharacter();
-	      }, 500);
+	        typeNext();
+	      }, 500);                         // 0.5 s pause between lines
 	    }
 	  }
 	
-	  typeNextCharacter();
+	  typeNext();
 	</script>
+
 
       <h2 style="color: #fff;" class="mt-4">
         .NET Developer | Skilled in Angular, React & SQL
