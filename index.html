@@ -106,36 +106,36 @@
       </h1>
 
       <!-- Typing Animation -->
+
       <span id="typing-animation" class="typing-text"></span>
-
-      <script>
-        const typingElement = document.getElementById('typing-animation');
-        const texts = [
-          'a Full Stack .NET Developer',
-          'a Software Developer',
-          'a Frontend Developer',
-          'a SQL & EF Core Enthusiast',
-          'a CS Graduate'
-        ];
-        let textIndex = 0, charIndex = 0;
-
-        function typeNextCharacter() {
-          if (charIndex < texts[textIndex].length) {
-            typingElement.textContent += texts[textIndex].charAt(charIndex++);
-            setTimeout(typeNextCharacter, 150);
-          } else {
-            // pause on full word, then clear & move to next
-            setTimeout(() => {
-              typingElement.textContent = '';
-              charIndex = 0;
-              textIndex = (textIndex + 1) % texts.length;
-              typeNextCharacter();
-            }, 2000);
-          }
-        }
-
-        typeNextCharacter();
-      </script>
+	<script>
+	  const typingElement = document.getElementById('typing-animation');
+	  const texts = [
+	    'a Full Stack .NET Developer',
+	    'a Software Developer',
+	    'a Frontend Developer',
+	    'a SQL & EF Core Enthusiast',
+	    'a CS Graduate'
+	  ];
+	  let textIndex = 0, charIndex = 0;
+	
+	  function typeNextCharacter() {
+	    if (charIndex < texts[textIndex].length) {
+	      typingElement.textContent += texts[textIndex].charAt(charIndex++);
+	      setTimeout(typeNextCharacter, 150);
+	    } else {
+	      // pause 0.5s on full phrase, then clear & next
+	      setTimeout(() => {
+	        typingElement.textContent = '';
+	        charIndex = 0;
+	        textIndex = (textIndex + 1) % texts.length;
+	        typeNextCharacter();
+	      }, 500);
+	    }
+	  }
+	
+	  typeNextCharacter();
+	</script>
 
       <h2 style="color: #fff;" class="mt-4">
         .NET Developer | Skilled in Angular, React & SQL
