@@ -9767,6 +9767,12 @@ textarea.form-control {
   }
 }
 
+.zoom-effect img {
+  transition: transform .3s ease;
+}
+.zoom-effect:hover img {
+  transform: scale(1.05);
+}
 
 /*  */
 /*  */
