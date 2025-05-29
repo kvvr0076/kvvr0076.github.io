@@ -9737,5 +9737,37 @@ textarea.form-control {
 }
 
 
+@media (max-width: 991.98px) {
+  /* make the container the positioning context */
+  .navbar .container {
+    position: relative;
+  }
+
+  /* position the collapse under the toggler */
+  #ftco-nav {
+    position: absolute;
+    top: 100%;       /* right below the navbar */
+    right: 0;        /* align to the right edge of the container */
+    left: auto;      /* don’t stretch to the left */
+    background: #000;/* solid black */
+    padding: 0.5rem 1rem;
+    width: auto;     /* shrink-to-fit */
+    z-index: 1000;
+    border-radius: 0 0 0.25rem 0.25rem;
+  }
+
+  /* stack the links and left-align them inside */
+  #ftco-nav .navbar-nav {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  #ftco-nav .nav-link {
+    padding: 0.5rem 0;
+    width: 100%;
+  }
+}
+
+
+
 /*  */
 /*  */
