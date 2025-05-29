@@ -9767,18 +9767,6 @@ textarea.form-control {
   }
 }
 
-/* add at the bottom of css/style.css */
-.block-20 {
-  display: block;               /* make the <a> fill its container */
-  width: 100%;                  /* or a fixed width if you prefer */
-  height: 250px;                /* choose an appropriate height */
-  background-size: cover;       /* scale the image to fill */
-  background-position: center;  /* center the image */
-  border-radius: 0.25rem;       /* optional, to match card corners */
-  overflow: hidden;             /* contain the zoom effect */
-}
-
-
 
 /*  */
 /*  */
