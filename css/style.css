@@ -9774,5 +9774,24 @@ textarea.form-control {
   transform: scale(1.05);
 }
 
+/* make each project image the same height and crop evenly */
+.blog-entry .zoom-effect img {
+  display: block;              /* remove inline quirks */
+  width: 100%;                 /* fill the column */
+  height: 200px;               /* choose the height you want */
+  object-fit: cover;           /* crop/scale to fill the box */
+}
+
+/* stack image + text neatly */
+.blog-entry {
+  display: flex;
+  flex-direction: column;
+}
+.blog-entry .text {
+  margin-top: 1rem;            /* space under the image */
+  clear: both;                 /* just in case */
+}
+
+
 /*  */
 /*  */
