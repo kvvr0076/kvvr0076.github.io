@@ -9774,22 +9774,12 @@ textarea.form-control {
   transform: scale(1.05);
 }
 
-/* make each project image the same height and crop evenly */
-/* at the bottom of style.css */
 .blog-entry .zoom-effect {
-  /* ensure the <a> is the right size */
   display: flex;
   justify-content: center;
-  align-items: center;
-  height: 200px;          /* whatever uniform height you need */
+  align-items: flex-start; /* top-align the contained img */
+  height: 200px;
   overflow: hidden;
-}
-
-.blog-entry .zoom-effect img {
-  max-width: 100%;
-  max-height: 100%;
-  object-fit: contain;     /* show the whole image, no cropping */
-  object-position: center; /* center it in the box */
 }
 
 
