@@ -9774,12 +9774,25 @@ textarea.form-control {
   transform: scale(1.05);
 }
 
+/* 3:2 container for all project cards */
 .blog-entry .zoom-effect {
-  display: flex;
-  justify-content: center;
-  align-items: flex-start; /* top-align the contained img */
-  height: 200px;
-  overflow: hidden;
+  display: block;
+  width: 100%;              /* fill the column’s width */
+  aspect-ratio: 3 / 2;      /* force a 3:2 box */
+  background-color: #0d1117;/* match your dark page background */
+  overflow: hidden;         /* crop any overflow */
+  position: relative;       /* for contained img centering */
+}
+
+/* make the img show fully, centered with bars left/right */
+.blog-entry .zoom-effect img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  max-width: 100%;
+  max-height: 100%;
+  transform: translate(-50%, -50%);
+  object-fit: contain;      /* letterbox instead of crop */
 }
 
 
